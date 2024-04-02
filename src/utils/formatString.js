@@ -29,6 +29,8 @@ const formatTime = (time) => {
 };
 
 const formatField = (item, bid) => {
+  // Ensure bid does not exceed 10 million
+  const cappedBid = Math.min(bid, 10000000);
   const item_padded = item.toString().padStart(5, "0");
   const bid_padded = bid.toString().padStart(5, "0");
   return `item${item_padded}_bid${bid_padded}`;
