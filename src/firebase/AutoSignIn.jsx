@@ -26,7 +26,7 @@ export const AutoSignIn = () => {
       }
     });
 
-    // Clean up the onAuthStateChanged listener when the component unmounts
+    // Clean up the onAuthStateChanged listener when the component unmounts//
     return () => unsubscribe();
   }, []);
 
